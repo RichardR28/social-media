@@ -5,15 +5,18 @@ import {
   SidebarGroup,
   SidebarHeader,
 } from "@/components/ui/sidebar"
+import Footer from "./Footer"
 
 export default function CutomSidebar() {
   return (
-    <Sidebar variant="floating" collapsible="icon">
+    <Sidebar id="custom-sidebar" variant="floating" collapsible="icon">
       <SidebarHeader>header</SidebarHeader>
       <SidebarContent>
         <SidebarGroup>Teste</SidebarGroup>
       </SidebarContent>
-      <SidebarFooter></SidebarFooter>
+      <SidebarFooter>
+        <Footer />
+      </SidebarFooter>
     </Sidebar>
   )
 }

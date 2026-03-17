@@ -1,3 +1,3 @@
-import CutomSidebar from "./CutomSidebar";
+import CutomSidebar from "./customSidebar/CutomSidebar";
 
 export { CutomSidebar }

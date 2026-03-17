@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import { CutomSidebar } from "./custom-components";
 import { Home } from "./views";
-import { SidebarProvider, SidebarTrigger } from "./components/ui/sidebar";
+import { SidebarProvider } from "./components/ui/sidebar";
 
 export default function Router() {
+
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <CutomSidebar />
-      <SidebarTrigger />
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
