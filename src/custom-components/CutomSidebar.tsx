@@ -8,10 +8,10 @@ import {
 
 export default function CutomSidebar() {
   return (
-    <Sidebar side="left" variant="floating" collapsible="offcanvas">
-      <SidebarHeader></SidebarHeader>
+    <Sidebar variant="floating" collapsible="icon">
+      <SidebarHeader>header</SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>t</SidebarGroup>
+        <SidebarGroup>Teste</SidebarGroup>
       </SidebarContent>
       <SidebarFooter></SidebarFooter>
     </Sidebar>
