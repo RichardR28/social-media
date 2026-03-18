@@ -25,10 +25,10 @@ type CustomSelectProps = React.ComponentPropsWithoutRef<typeof Select> & {
 export default function CustomSelect({ id, label, description, placeholder, initialText, invalid, errorMessage, options, onChange, ...props }: CustomSelectProps) {
   const randomId = `field-${Math.random().toString(36).substr(2, 9)}`;
   return (
-    <CustomField label={label} description={description} id={id || randomId} errorMessage={invalid && errorMessage || "Campo Inválido"}>
+    <CustomField label={label} description={description} id={id || randomId} errorMessage={invalid ? (errorMessage || "Campo Inválido") : undefined}>
       <Select {...props} onValueChange={onChange}>
         <SelectTrigger aria-invalid={invalid} className="w-full">
-          <SelectValue placeholder={placeholder || "Selecione uma opção"} />
+          <SelectValue placeholder={placeholder || initialText} />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
