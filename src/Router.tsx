@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import { CutomSidebar } from "./custom-components";
+import { CutomSidebar, ThemeProvider } from "./customComponents";
 import { Home } from "./views";
 import { SidebarProvider } from "./components/ui/sidebar";
-import { ThemeProvider } from "./custom-components/themeProvider/ThemeProvider";
 
 
 export default function Router() {
