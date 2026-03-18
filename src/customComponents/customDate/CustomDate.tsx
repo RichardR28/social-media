@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/popover"
 import { CalendarIcon } from "lucide-react"
 import { CustomField } from "../";
+import { set } from "date-fns";
 
 type CustomDateProps = {
   open: boolean;
@@ -49,6 +50,9 @@ export default function CustomDate({ open, onOpenChange, value, onChange, label,
   useEffect(() => {
     if (!value) {
       onChange(formatDate(new Date()))
+      setTimeout(() => {
+        document.getElementById("date-required")?.blur()
+      }, 0)
     }
   }, [])
 

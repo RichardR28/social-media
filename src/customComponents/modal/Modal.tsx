@@ -22,16 +22,16 @@ export default function Modal({ title, description, openTrigger, children }: Mod
       <DialogTrigger asChild>
         {openTrigger}
       </DialogTrigger>
-      <DialogContent onOpenAutoFocus={e => e.preventDefault()}>
+      <DialogContent>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>
         </DialogHeader>
         {children}
-        <DialogFooter>
+        {/* <DialogFooter>
           <DialogClose>Cancel</DialogClose>
           <DialogClose className="bg-red-500 text-white">Continue</DialogClose>
-        </DialogFooter>
+        </DialogFooter> */}
       </DialogContent>
     </Dialog>
   );

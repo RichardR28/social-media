@@ -6,5 +6,6 @@ import CustomInput from "./customInput/CustomInput";
 import CustomSelect from "./customSelect/CustomSelect";
 import CustomField from "./customField/CustomField";
 import CustomDate from "./customDate/CustomDate";
+import CustomTextArea from "./customTextarea/CustomTextArea";
 
-export { CutomSidebar, CustomTooltip, Modal, ThemeProvider, CustomInput, CustomSelect, CustomField, CustomDate }
+export { CutomSidebar, CustomTooltip, Modal, ThemeProvider, CustomInput, CustomSelect, CustomField, CustomDate, CustomTextArea }

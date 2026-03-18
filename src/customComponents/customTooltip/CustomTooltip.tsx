@@ -11,9 +11,11 @@ export default function CustomTooltip({ description, children, fullWidth, ...pro
     <div className={fullWidth ? "flex w-full" : undefined} {...props}>
       <TooltipProvider >
         <Tooltip>
-          <TooltipTrigger asChild className="w-full">
-            {children}
-          </TooltipTrigger>
+          <div className="w-full">
+            <TooltipTrigger asChild className="w-full">
+              {children}
+            </TooltipTrigger>
+          </div>
           <TooltipContent side="right">
             <p>{description}</p>
           </TooltipContent>

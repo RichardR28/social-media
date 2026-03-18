@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { CustomInput, CustomSelect, CustomDate } from '../';
+import { CustomInput, CustomSelect, CustomDate, CustomTextArea } from '../';
+import { Button } from "@/components/ui/button"
 
 
 export default function CreatePostForm() {
@@ -25,7 +26,10 @@ export default function CreatePostForm() {
         { value: "Reels", label: "Reels" },
       ]} />
       <CustomInput label="Tema" value={theme} onChange={setTheme} placeholder="Digite o tema do post" />
-      <CustomInput label="Copy" value={copy} onChange={setCopy} placeholder="Texto do post..." />
+      <CustomTextArea label="Copy" value={copy} onChange={setCopy} placeholder="Texto do post..." />
+      <Button variant="default" size="lg" className="w-full bg-orange-500 hover:bg-orange-600 text-white hover:text-black overflow-hidden">
+        <span className="text-[16px] font-medium">Criar Post</span>
+      </Button>
     </section>
   )
 }
