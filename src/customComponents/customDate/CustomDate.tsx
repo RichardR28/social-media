@@ -16,7 +16,6 @@ import {
 } from "@/components/ui/popover"
 import { CalendarIcon } from "lucide-react"
 import { CustomField } from "../";
-import { set } from "date-fns";
 
 type CustomDateProps = {
   open: boolean;
