@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, ArrowLeft, Moon, Sun, PlusIcon } from "lucide-react"
 import { useSidebar } from "@/components/ui/sidebar"
 import { useTheme } from "../themeProvider/ThemeProvider";
-import { Modal, CustomTooltip } from "../";
+import { Modal, CustomTooltip, Divider } from "../";
 import CreatePostForm from "./CreatePostForm";
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <section className="flex items-center justify-center flex-col gap-3">
+    <section className="flex items-center justify-center flex-col gap-4 pb-3">
       <Modal title="Novo Post" description="Preencha as informações para criar um novo post" openTrigger={
         <CustomTooltip fullWidth description="Criar um novo post">
           {open ?
@@ -32,7 +32,7 @@ export default function Footer() {
       >
         <CreatePostForm />
       </Modal>
-      <hr className="w-full border-t" />
+      <Divider />
       <CustomTooltip description={theme === "dark" ? "Alterar para tema claro" : "Alterar para tema escuro"}>
         <div className="w-full flex items-center justify-center">
           <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} variant="outline" size="icon-lg" className="rounded-full size-12">
