@@ -10,7 +10,7 @@ export default function Footer() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <section className="flex items-center justify-center flex-col gap-4 pb-3">
+    <section className="flex items-center justify-center flex-col gap-4 pb-2">
       <Modal title="Novo Post" description="Preencha as informações para criar um novo post" openTrigger={
         <CustomTooltip fullWidth description="Criar um novo post">
           {open ?
