@@ -22,7 +22,7 @@ export function NavSidebarButton({ label, href, icon, tooltip }: NavSidebarButto
       <CustomTooltip description={tooltip}>
         <Button
           variant="default"
-          className={`flex flex-row cursor-pointer items-center bg-transparent text-white hover:text-black hover:bg-orange-500 transition-all duration-300 ease-in-out ${open ? 'justify-start w-full pt-5 pb-5' : 'justify-center gap-0 w-10 h-10'}`}
+          className={`flex flex-row cursor-pointer items-center bg-transparent text-primary hover:text-black hover:bg-orange-500 transition-all duration-300 ease-in-out ${open ? 'justify-start w-full pt-5 pb-5' : 'justify-center gap-0 w-10 h-10'}`}
           onClick={() => console.log(`Navigate to ${href}`)}
         >
           {styledIcon}
