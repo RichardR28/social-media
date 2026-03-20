@@ -3,15 +3,14 @@ import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/comp
 type CustomTooltipProps = {
   children: React.ReactNode;
   description: string;
-  fullWidth?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export default function CustomTooltip({ description, children, fullWidth, ...props }: CustomTooltipProps) {
+export default function CustomTooltip({ description, children, ...props }: CustomTooltipProps) {
   return (
-    <div className={fullWidth ? "flex w-full" : undefined} {...props}>
-      <TooltipProvider >
+    <div className="flex w-full" {...props}>
+      <TooltipProvider delayDuration={1000} >
         <Tooltip>
-          <div className="w-full">
+          <div className="w-full justify-center items-center flex">
             <TooltipTrigger asChild className="w-full">
               {children}
             </TooltipTrigger>

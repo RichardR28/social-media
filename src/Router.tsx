@@ -8,8 +8,8 @@ export default function Router() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <SidebarProvider defaultOpen={false} style={{
-        "--sidebar-width": "180px",
-        "--sidebar-width-icon": "75px"
+        "--sidebar-width": "190px",
+        "--sidebar-width-icon": "70px"
       } as React.CSSProperties}>
         <CutomSidebar />
         <main className="p-[8px] flex flex-1 justify-start">

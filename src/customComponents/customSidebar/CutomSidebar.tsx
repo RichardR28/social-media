@@ -2,20 +2,20 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarGroup,
   SidebarHeader,
 } from "@/components/ui/sidebar"
 import Header from "./Header"
+import { Content } from "./Content"
 import Footer from "./Footer"
 
 export default function CutomSidebar() {
   return (
     <Sidebar id="custom-sidebar" variant="floating" collapsible="icon">
-      <SidebarHeader className="pt-4 pb-4">
+      <SidebarHeader className="pt-4 pb-4 h-auto overflow-hidden">
         <Header />
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup className="pt-0">Teste</SidebarGroup>
+        <Content />
       </SidebarContent>
       <SidebarFooter>
         <Footer />
