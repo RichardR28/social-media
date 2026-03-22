@@ -1,8 +1,8 @@
-export default function Home() {
+import { useNavigate } from "react-router";
 
+export default function Home() {
+  const navigate = useNavigate();
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <button className="bg-white text-blue-500 hover:bg-blue-500 hover:text-white" onClick={() => navigate("/login")}>Login</button>
   )
 }
