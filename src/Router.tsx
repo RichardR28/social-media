@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router";
 import { CustomSidebar, PageContainer, ThemeProvider } from "./customComponents";
-import { Home, Login } from "./views";
+import { Home, LoginPage, CreateAccount } from "./views";
 import { SidebarProvider } from "./components/ui/sidebar";
 
 const withoutSidebarPages = ["/login", "/register"];
@@ -19,8 +19,8 @@ function App() {
         <PageContainer>
           <Routes>
             <Route index element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<>Register</>} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<CreateAccount />} />
           </Routes>
         </PageContainer>
       </main>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ptBR } from "react-day-picker/locale";
 import { Calendar } from "@/components/ui/calendar"
 import {
@@ -18,15 +18,15 @@ import { CalendarIcon } from "lucide-react"
 import { CustomField } from "../";
 
 type CustomDateProps = {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
   value: string;
   onChange: (value: string) => void;
   label?: string;
   description?: string;
 }
 
-export default function CustomDate({ open, onOpenChange, value, onChange, label, description }: CustomDateProps) {
+export default function CustomDate({ value, onChange, label, description }: CustomDateProps) {
+  const [open, setOpen] = useState(false);
+
   function formatDate(date: Date | undefined) {
     if (!date) {
       return ""
@@ -65,12 +65,12 @@ export default function CustomDate({ open, onOpenChange, value, onChange, label,
           onKeyDown={(e) => {
             if (e.key === "ArrowDown") {
               e.preventDefault()
-              onOpenChange(true)
+              setOpen(true)
             }
           }}
         />
         <InputGroupAddon align="inline-end">
-          <Popover open={open} onOpenChange={onOpenChange}>
+          <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
               <InputGroupButton
                 id="date-picker"
@@ -94,7 +94,7 @@ export default function CustomDate({ open, onOpenChange, value, onChange, label,
                 locale={ptBR}
                 onSelect={(date) => {
                   onChange(formatDate(date))
-                  onOpenChange(false)
+                  setOpen(false)
                 }}
               />
             </PopoverContent>

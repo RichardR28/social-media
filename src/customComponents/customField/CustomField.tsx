@@ -10,11 +10,11 @@ type CustomFieldProps = {
 
 export default function CustomField({ label, description, id, errorMessage, children }: CustomFieldProps) {
   return (
-    <Field className="flex gap-1">
+    <Field className="flex gap-1.5">
       {label && <FieldLabel htmlFor={id}>{label}</FieldLabel>}
       {children}
       {description && <FieldDescription>{description}</FieldDescription>}
-      {errorMessage && <FieldError>{errorMessage}</FieldError>}
+      {errorMessage && <FieldError className="whitespace-pre-line">{errorMessage}</FieldError>}
     </Field>
   );
 }

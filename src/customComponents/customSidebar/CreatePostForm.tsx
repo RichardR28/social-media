@@ -26,8 +26,6 @@ export default function CreatePostForm() {
   return (
     <section className="flex flex-col gap-4">
       <CustomDate
-        open={dateOpen}
-        onOpenChange={setDateOpen}
         value={date}
         onChange={setDate}
         label="Data *"

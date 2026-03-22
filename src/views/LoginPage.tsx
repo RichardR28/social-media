@@ -1,15 +1,19 @@
 import { useNavigate } from "react-router";
-import { CustomInput } from "@/customComponents";
+import { CustomInput, CustomCard, CustomButton } from "@/customComponents";
 import { useState } from "react";
-import { CustomCard, CustomButton } from "../customComponents"
+import { UserAction } from "@/actions";
 
-export default function Login() {
+const { Login } = UserAction;
+
+export default function LoginPage() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function SendLogin() {
+  async function SendLogin() {
     console.log("login");
+    const data = { email, password };
+    await Login(data, () => navigate("/home"));
   }
 
   return (
